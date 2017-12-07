@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Онлайн-словник</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="translator">
+  <h2>Онлайн-перекладач</h2>
+    <input type="text" id="word" placeholder="Слово для перекладу" required="true">
+    <div class="language">
+    	<input id="ua" class="toggle toggle-left" name="lang" type="radio" checked>
+		<label for="ua" class="btn">з української</label>
+		<input id="en" class="toggle toggle-right" name="lang" type="radio">
+		<label for="en" class="btn">з англійської</label>
+    </div>
+
+    <button id='translateButton'>Перекласти</button>
+<div id="block">
+	<div id='result'></div>
+</div>
+</div>
+
+<script src="js/dictionary.js"></script>
+<script src="js/translate.js"></script>
+
+</body>
+</html>
