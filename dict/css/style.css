@@ -42,7 +42,7 @@ body {
   .translator #translateButton {
     background: #02B875;
     border: none;
-    line-height: 40px;
+    padding: 12px;
     width: 45%;
     margin: 35px auto;
     color: #FFF;
