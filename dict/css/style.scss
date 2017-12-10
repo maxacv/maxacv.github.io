@@ -23,7 +23,7 @@ body {
   
   font-family: Helvetica;
   
-  padding: 40px 30px 50px;
+  padding: 40px 30px;
   text-align: center;
   h2 {
     margin-bottom: 40px;
@@ -89,15 +89,26 @@ body {
 
   }
   
-  .result {
-    width: 85%;
+  #result {
+    width: 90%;
     margin: 25px auto 0;
-    padding: 30px 0;
-    background: #f3f3f3;
-    border-radius: 7px;
+    padding: 25px 10px;
+    border-radius: 0px;
     font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 0.01em;
+    max-height: 160px;
+    overflow: auto;
+  }
+  .none {
+    display: none;
+  }
+  .show {
+    background: #f3f3f3;
+    display: block;
+  }
+
+  .error {
+    margin: 5px 15px;
   }
 }
 

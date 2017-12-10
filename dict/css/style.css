@@ -19,7 +19,7 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 7px;
   font-family: Helvetica;
-  padding: 40px 30px 50px;
+  padding: 40px 30px;
   text-align: center; }
   .translator h2 {
     margin-bottom: 40px;
@@ -70,15 +70,22 @@ body {
     right: 0;
     background: #02B875;
     height: 5px; }
-  .translator .result {
-    width: 85%;
+  .translator #result {
+    width: 90%;
     margin: 25px auto 0;
-    padding: 30px 0;
-    background: #f3f3f3;
-    border-radius: 7px;
+    padding: 25px 10px;
+    border-radius: 0px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.01em; }
+    letter-spacing: 0.01em;
+    max-height: 160px;
+    overflow: auto; }
+  .translator .none {
+    display: none; }
+  .translator .show {
+    background: #f3f3f3;
+    display: block; }
+  .translator .error {
+    margin: 5px 15px; }
 
 @media screen and (max-width: 480px) {
   .translator {

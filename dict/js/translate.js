@@ -2,7 +2,7 @@ var language = 'UKR';
 
 function translate(key, dictionary, lang) {
 	var inputWordExist = false;
-
+	key = key.replace(/\s/g, '');
 	var newResult = document.createElement('div');
 	newResult.id = 'result';
 	document.getElementById('block').appendChild(newResult);
@@ -25,10 +25,12 @@ function translate(key, dictionary, lang) {
     	}
 	}
 
-
-    if (!inputWordExist) {
+	if (key == "") {
+		create('error', 'Необхідно ввести слово');
+	}
+    else if (!inputWordExist) {
     	create('error', 'Немає перекладу для введеного слова');
-    }
+    };
 
 };
 
@@ -68,6 +70,9 @@ window.addEventListener("load", function() {
         var word = document.getElementById('word').value;
         clear();
         translate(word, dict, language);
+        if (!document.body.classList.contains('show')) {
+        	document.getElementById('result').className += 'show';
+		};
     });
-})
+});
 
